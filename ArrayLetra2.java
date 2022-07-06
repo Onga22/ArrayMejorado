@@ -19,11 +19,13 @@ public class ArrayLetra2 {
         ArrayList<Integer> arrayPosiciones = new ArrayList();
         int valorAscii=0;           
         int contDos=0;
+        int contUno=1;
         
         for (int i = 0; i < letraUno.length(); i++) {
             contDos++;
-            if(contDos>1){
-                System.out.println("Error, ingreso mas de un caracter");
+            if(contDos>contUno){
+                System.out.println("Error, ingreso mas de un caracter. Por favor vuelva a intentarlo!! ");
+                break;
             }
             
         }
@@ -32,20 +34,22 @@ public class ArrayLetra2 {
             valorAscii= (int) letra;
            
              if(valorAscii<96||valorAscii>123){
-            System.out.println("Error, el caracter ingresado no corresponde a una letra");
+            System.out.println("Error, ingreso un valor numerico, un carecter en  mayuscula o  algun signo. Por favor vuelva a intentarlo!! ");
             break;
              }
-             
-             if (arrayCadena[i]==letra){
+            if (arrayCadena[i]==letra){
                  cont++;
                  arrayPosiciones.add(i);
-                  System.out.println("La letra " + letra + " se repite " + cont + " veces y se encuentra en la posicion " + arrayPosiciones.toString());
-                  break;
-                 }
+                 
+                  
+                  }
+             
+             
         }
-               
-                }
+               System.out.println("La letra " + letra + " se repite " + cont + " veces y se encuentra en la posicion " + arrayPosiciones.toString());
         
+                }
+    
         }
         
     
